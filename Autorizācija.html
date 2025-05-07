@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sapņu ceļojumi</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  
+    <meta charset="UTF-8">
+    <title>Autorizācija</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+<header>
+  <nav>
+  <div class="topnav">
+    <a class="active"></a>
+    <a href="galerija.html">Galerīja</a>
+    <a href="Sākums.html">Sākums</a>
+     </nav>
+  </div>
+   <body>
+      <div class="container">
+        <h1>AUTORIZĀCIJA</h1>
+        <form id="loginForm">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Ievadi e-pastu" required>
+
+          <label for="password">Parole</label>
+          <input type="password" id="password" placeholder="Ievadi paroli" required>
+
+          <button type="submit">Sign In</button>
+          <p><a href="#">Aizmirsi paroli?</a></p>
+        </form>
+      </div>
+
+      <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+
+          // Šeit vari pievienot reālu validāciju vai datu pārbaudi
+          if (email === "test@example.com" && password === "parole123") {
+            alert("Autorizācija veiksmīga!");
+          } else {
+            alert("Nepareizs e-pasts vai parole!");
+          }
+        });
+      </script>
+    </body>
+    </html>
+ 
