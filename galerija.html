@@ -1,75 +1,103 @@
+
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Sapņu ceļojumi</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    .gallery-header {
+      background-color: #3f2c6e;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+      background-color: #3f2c6e;
+    }
+    
+    .nav-button {
+      background-color: #8792dc;
+      padding: 8px 16px;
+      border: none;
+      color: white;
+      text-decoration: none;
+    }
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      padding: 20px;
+      background-color: #9b8cd4;
+    }
+    
+    .gallery-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    
+    .footer {
+      background-color: #3f2c6e;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .plane-icon {
+      width: 150px;
+      height: auto;
+    }
+  </style>
 </head>
-<header>
-  <nav>
-  <div class="topnav">
-    
-    <a class="active"</a>
-    <a href="Autorizācija.html">Autorizācija</a>
-    <a href="Sākums.html">Sākums</a>
-</div>
-
-  </nav>
-</header>
-  <body>
-   
-    
-      
-    <h1>GALERIJA</h1>
-
-    
-   
-  </body>
-  </html>
-  <img src="laipot.png" alt="laipot">
-  <img src="ala.png" alt="ala">
-  <img src= alt="palmas">
-<figure></figure>
-<img src= alt="lisbona">
-</figure>
-<img src= alt="laiva"> 
-<img src= alt="kalni"> 
-<img src= alt="grieķija"> 
-<img src= alt="jahta">
-<img src= alt="sniegs">
-<img src= alt="salas">
-
-
-<!-- YouTube tiešraide -->
-<div class="video-wrapper">
-  <iframe width="360" height="215"
-    src="https://www.youtube.com/embed/vyJgNw6CYgE"
-    title="YouTube Live"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-</div>
-
-  </section>
-
 <body>
+  <div class="nav-buttons">
+    <a href="Sākums.html" class="nav-button">Sākums</a>
+    <a href="#" class="nav-button">Par mums</a>
+    <a href="#" class="nav-button">Plānošana</a>
+    <a href="Autorizācija.html" class="nav-button">Autorizācija</a>
+    <a href="#" class="nav-button">Kontakti</a>
+    <a href="#" class="nav-button">Sūdzības pieteikšana</a>
+  </div>
 
+  <div class="gallery-header">
+    <img src="lidmašīna.png.png" alt="plane" class="plane-icon" style="transform: scaleX(-1)">
+    <h1>GALERIJA</h1>
+    <img src="lidmašīna.png.png" alt="plane" class="plane-icon">
+  </div>
 
+  <div class="gallery-grid">
+    <img src="laipot.png" alt="laipot">
+    <img src="okeāns.png" alt="okeāns">
+    <img src="palmas.png" alt="palmas">
+    <img src="ala.png" alt="ala">
+    <img src="tuksnes.png" alt="tuksnes">
+    <img src="parīze.png" alt="parīze">
+    <img src="laipot.png" alt="laipot">
+    <img src="okeāns.png" alt="okeāns">
+    <img src="ala.png" alt="ala">
+    <img src="tuksnes.png" alt="tuksnes">
+    <img src="laipot.png" alt="laipot">
+    <img src="okeāns.png" alt="okeāns">
+    <img src="palmas.png" alt="palmas">
+    <img src="ala.png" alt="ala">
+    <img src="tuksnes.png" alt="tuksnes">
+  </div>
 
+  <div class="footer">
+    <div>📍 Adrese: Brīvības iela 123, Rīga, LV-1010, Latvija</div>
+    <div>📞 Telefons: +371 1234 5678</div>
+  </div>
 
-
-
-
-  
-  <p>📍 Adrese:  Brīvības iela 123,
-    Rīga, LV-1010, Latvija</p>
-  <p>📞 Telefons:  +371 1234 5678</p>
-  
-
-
+  <script src="script.js"></script>
 </body>
-   <script src="script.js"></script>
 </html>
