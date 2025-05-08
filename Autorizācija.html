@@ -1,54 +1,123 @@
+
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Sapņu ceļojumi</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
-  
-    <meta charset="UTF-8">
-    <title>Autorizācija</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-
-<header>
-  <nav>
-  <div class="topnav">
-    <a class="active"></a>
-    <a href="galerija.html">Galerīja</a>
-    <a href="index.html">Sākums</a>
-     </nav>
+  <style>
+    body {
+      background-color: #8792dc;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .nav-buttons {
+      background-color: #3f2c6e;
+      padding: 10px;
+      display: flex;
+      gap: 10px;
+    }
+    .nav-button {
+      background-color: #8792dc;
+      padding: 8px 16px;
+      border: none;
+      color: black;
+      text-decoration: none;
+    }
+    .header-content {
+      background-color: #3f2c6e;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    .plane-icon {
+      width: 150px;
+      height: auto;
+    }
+    .auth-container {
+      background-color: white;
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .auth-container input {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .auth-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .footer {
+      background-color: #3f2c6e;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-buttons">
+    <a href="index.html" class="nav-button">Sākums</a>
+    <a href="galerija.html" class="nav-button">Galerija</a>
   </div>
-   <body>
-      <div class="container">
-        <h1>AUTORIZĀCIJA</h1>
-        <form id="loginForm">
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Ievadi e-pastu" required>
 
-          <label for="password">Parole</label>
-          <input type="password" id="password" placeholder="Ievadi paroli" required>
+  <div class="header-content">
+    <img src="lidmašīna.png.png" alt="plane" class="plane-icon" style="transform: scaleX(-1)">
+    <h1>AUTORIZĀCIJA</h1>
+    <img src="lidmašīna.png.png" alt="plane" class="plane-icon">
+  </div>
 
-          <button type="submit">Sign In</button>
-          <p><a href="#">Aizmirsi paroli?</a></p>
-        </form>
-      </div>
+  <div class="auth-container">
+    <form id="loginForm">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Ievadi e-pastu" required>
 
-      <script>
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-          e.preventDefault();
-          const email = document.getElementById('email').value;
-          const password = document.getElementById('password').value;
+      <label for="password">Parole</label>
+      <input type="password" id="password" placeholder="Ievadi paroli" required>
 
-          // Šeit vari pievienot reālu validāciju vai datu pārbaudi
-          if (email === "test@example.com" && password === "parole123") {
-            alert("Autorizācija veiksmīga!");
-          } else {
-            alert("Nepareizs e-pasts vai parole!");
-          }
-        });
-      </script>
-    </body>
-    </html>
- 
+      <button type="submit">Sign In</button>
+      <p><a href="#">Aizmirsi paroli?</a></p>
+    </form>
+  </div>
+
+  <div class="footer">
+    <div>📍 Adrese: Brīvības iela 123, Rīga, LV-1010, Latvija</div>
+    <div>📞 Telefons: +371 1234 5678</div>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      if (email === "test@example.com" && password === "parole123") {
+        alert("Autorizācija veiksmīga!");
+      } else {
+        alert("Nepareizs e-pasts vai parole!");
+      }
+    });
+  </script>
+</body>
+</html>
